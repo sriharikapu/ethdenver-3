@@ -13,6 +13,9 @@ contract FoodCredit is StandardToken, Ownable {
         uint256 weight;
         uint256 units;
         string description;
+        string date;
+        string expDate;
+        string contact;
     }
 
     function FoodCredit() public {}
