@@ -1,18 +1,16 @@
 const offers = [
   {
-    id: '1',
+    id: 1,
     weight: '500',
-    donorAddress: 'address1'
+    donorAddress: '0xf17f52151EbEF6C7334FAD080c5704D77216b732'
   },
   {
-    id: '2',
-    weight: '50',
-    donorAddress: 'address2'
+    id: 2,
+    weight: '50'
   },
   {
-    id: '3',
-    weight: '200',
-    donorAddress: 'address3'
+    id: 3,
+    weight: '200'
   }
 ]
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import AccountContainer from './AccountContainer'
+import EthContainer from './EthContainer'
 
 import './css/oswald.css'
 import './css/open-sans.css'
@@ -19,7 +19,7 @@ class App extends Component {
           <main className="container">
             <div className="pure-g">
               <div className="pure-u-1-1">
-                <Route component={AccountContainer} />
+                <Route component={EthContainer} />
               </div>
             </div>
           </main>
