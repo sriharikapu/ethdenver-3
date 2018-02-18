@@ -1,9 +1,6 @@
 pragma solidity ^0.4.18;
 
-import 'zeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
-import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
-
-contract FoodCredit is StandardToken, Ownable {
+contract YumCredit {
     address owner;
     string public grocery;
     string public pantry;
@@ -13,9 +10,12 @@ contract FoodCredit is StandardToken, Ownable {
         uint256 weight;
         uint256 units;
         string description;
+        string date;
+        string expDate;
+        string contact;
     }
 
-    function FoodCredit() public {}
+    function YumCredit() public {}
 
     function setGrocery(string _grocery) public {
         grocery = _grocery;

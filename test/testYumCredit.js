@@ -1,11 +1,11 @@
-const FoodCredit = artifacts.require("./FoodCredit.sol");
+const YumCredit = artifacts.require("./YumCredit.sol");
 
-contract('FoodCredit', accounts => {
+contract('YumCredit', accounts => {
     var owner = accounts[0]
     let credits
 
     beforeEach(async function () {
-        credits = await FoodCredit.new({ from: owner })
+        credits = await YumCredit.new({ from: owner })
     })
 
     it('test it stores pantry name', async function () {
