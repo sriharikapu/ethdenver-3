@@ -1,30 +1,33 @@
 import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-import Home from './Home'
-import Mint from './Mint'
+import MinterHome from './Home'
+import MinterClaim from './Claim'
 
 const processes = {
-  home: Home,
-  mint: Mint,
+  home: MinterHome,
+  claim: MinterClaim,
   // search: Search
 }
 
 export default class Minter extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      process: 'home'
-    }
-  }
+  // componentWillUpdate (nextProps, nextState) {
+  //   if (this.state.process !== nextState.process) {
+  //     if (nextState.process === 'claim')
+  //       this.props.location.push(`${this.props.match.url}/claim/${nextState.process.claim.id}`)
+  //     else
+  //       this.props.location.push(`${this.props.match.url}/${nextState.process}`)
+  //   }
+  // }
 
   render () {
-    const Process = processes[this.state.process]
-
     return (
       <div>
         <h1>Minter</h1>
-        <Process />
+        <Switch>
+          <Route path={`${this.props.match.url}/claim/:id`} component={MinterClaim} />
+          <Route component={MinterHome} />
+        </Switch>
       </div>
     )
   }
