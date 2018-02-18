@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 const style = {
   background: '#ddd',
@@ -12,9 +13,12 @@ const style = {
 
 export default class Offer extends Component {
   render () {
+    const { id, weight } = this.props.offer
     return (
       <div style={style}>
-        <p>Offer { this.props.id }</p>
+        <p>Offer { id }</p>
+        <p>Weight: { weight }</p>
+        <Link to={`/minter/claim/${id}`}>Claim this offer</Link>
       </div>
     )
   }
