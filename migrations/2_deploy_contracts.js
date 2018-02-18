@@ -4,8 +4,8 @@ var YumCoinCrowdSale = artifacts.require("./YumCoinCrowdSale.sol");
 var Web3 = web3;
 
 module.exports = function (deployer, network, accounts) {
-  const startTime = Web3.eth.getBlock(web3.eth.blockNumber).timestamp + 1 // one second in the future
-  const endTime = startTime // 20 days
+  const startTime = Web3.eth.getBlock(web3.eth.blockNumber).timestamp + 10 // 10 second in the future
+  const endTime = Web3.eth.getBlock(web3.eth.blockNumber).timestamp + 15 // 15 seconds in the future
   const rate = new Web3.BigNumber(1000)
   const wallet = accounts[0]
 
