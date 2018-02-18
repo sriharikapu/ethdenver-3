@@ -1,28 +1,14 @@
 pragma solidity ^0.4.18;
 
+import './YumCoin.sol';
+
 contract YumCredit {
     address owner;
-    string public grocery;
+    string grocery;
     string public pantry;
 
-    struct Item {
-        uint256 price;
-        uint256 weight;
-        uint256 units;
-        string description;
-        string date;
-        string expDate;
-        string contact;
-    }
-
-    function YumCredit() public {}
-
-    function setGrocery(string _grocery) public {
-        grocery = _grocery;
-    }
-
-    function getGrocery() public view returns (string) {
-        return grocery;
+    function YumCredit() public {
+        owner = msg.sender;
     }
 
     function setPantry(string _pantry) public {
